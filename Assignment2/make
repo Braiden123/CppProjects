@@ -1,0 +1,35 @@
+# Make file for all the programs for TMA2
+# Make file execution(assuming mingw compiler): mingw32-make -f make
+# Date: Jan 15 2020
+# Copyright: 2020 Braiden Little
+
+CPP = g++
+OFLAG = -o
+DFLAG =--debug=on
+.SUFFIXES: .exe .cpp
+.cpp.exe:
+	$(CPP) $<
+
+all: \
+	TMA2Question1Header \
+	TMA2Question1 \
+	TMA2Question2 \
+	TMA2Question3Header \
+	TMA2Question3 \
+	TMA2Question4Header \
+	TMA2Question4 \
+
+TMA2Question1Header: TMA2Question1.h
+	$(CPP) $(OFLAG) TMA2Question1 TMA2Question1.h
+TMA2Question1: TMA2Question1.cpp
+	$(CPP) $(OFLAG) TMA2Question1 TMA2Question1.cpp
+TMA2Question2: TMA2Question2.cpp
+	$(CPP) $(OFLAG) TMA2Question2 TMA2Question2.cpp
+TMA2Question3Header: TMA2Question3.h
+	$(CPP) $(OFLAG) TMA2Question3 TMA2Question3.h
+TMA2Question3: TMA2Question3.cpp
+	$(CPP) $(OFLAG) TMA2Question3 TMA2Question3.cpp
+TMA2Question4Header: TMA2Question4.h
+	$(CPP) $(OFLAG) TMA2Question4 TMA2Question4.h
+TMA2Question4: TMA2Question4.cpp
+	$(CPP) $(OFLAG) TMA2Question4 TMA2Question4.cpp

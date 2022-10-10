@@ -1,0 +1,5 @@
+The purpose of this file is to be opened by 
+TMA1Question1.cpp, read the number of
+whitespace-seperated words in this file,
+then count the number of words in this file.
+The program should count 35 words.

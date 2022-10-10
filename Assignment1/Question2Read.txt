@@ -1,0 +1,5 @@
+This file is to be read 
+by the program TMA1Question2.cpp
+one line at at time.
+This file contains
+5 lines to be read. 

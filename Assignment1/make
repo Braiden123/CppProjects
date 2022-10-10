@@ -1,0 +1,39 @@
+# Make file for all the programs for TMA1
+# Make debug for TMA1Question2.cpp
+# Make file execution(assuming mingw compiler): mingw32-make -f make
+# Make debug execution(assuming mingw compiler): mingw32-make -f make debug
+# Date: Nov.25 2019
+# Copyright: 2019 Braiden Little
+
+CPP = g++
+OFLAG = -o
+DFLAG = debug=on
+.SUFFIXES: .exe .cpp
+.cpp.exe:
+	$(CPP) $<
+
+all: \
+	TMA1Question1 \
+	TMA1Question2 \
+	TMA1Question3 \
+	TMA1Question4 \
+	TMA1Question5 \
+
+debug: TMA1Question2debug \
+
+TMA1Question1: TMA1Question1.cpp
+	$(CPP) $(OFLAG) TMA1Question1 TMA1Question1.cpp
+TMA1Question2: TMA1Question2.cpp
+	$(CPP) $(OFLAG) TMA1Question2 TMA1Question2.cpp
+TMA1Question3: TMA1Question3.cpp
+	$(CPP) $(OFLAG) TMA1Question3 TMA1Question3.cpp
+TMA1Question4: TMA1Question4.cpp
+	$(CPP) $(OFLAG) TMA1Question4 TMA1Question4.cpp
+TMA1Question5: TMA1Question5.cpp
+	$(CPP) $(OFLAG) TMA1Question5 TMA1Question5.cpp
+TMA1Question2debug: TMA1Question2.cpp
+	$(CPP) $(OFLAG) TMA1Question2 TMA1Question2.cpp
+	TMA1Question2 $(DFLAG)
+
+
+
